@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        {% block title_name %}
+
+        {% endblock %}
+
+    </title>
+    {% include 'todo/head.html' %}
+
+</head>
+<body>
+
+{# Menu #}
+{% include 'todo/menu.html' %}
+
+{# main content#}
+<div style=" padding-top: 3rem;">
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}" style="padding-top: 4rem;">
+                MESSAGE: {{message}}
+            </div>
+        {% endfor %}
+
+    {% endif %}
+
+    {% block content %}
+
+    {% endblock %}
+</div>
+
+
+
+
+{# footer #}
+{% include 'todo/footer.html' %}
+
+
+{% include 'todo/javascripts.html' %}
+</body>
+</html>
