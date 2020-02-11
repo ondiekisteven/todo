@@ -121,7 +121,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
+# Path to static files in each app
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
+# Template used by Crispy for styling forms
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# Where to direct the user after successful login
+LOGIN_REDIRECT_URL = 'list-index'
+
+# DEFAULT LOGIN URL
+LOGIN_URL = 'login'

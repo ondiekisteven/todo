@@ -1,0 +1,21 @@
+{% extends 'todo/base.html' %}
+{% load crispy_forms_tags %}
+{% block title_name %}
+    ToDo Login
+{% endblock %}
+
+{% block content %}
+    <section class="section-table" >
+        <div class="container p-5">
+            <h2>You have been Logged out. Click the button below to log in again</h2>
+            <div class="border-top pt-3">
+                <small class="text-muted">
+                    <h4><a class="ml-2" href="{% url 'login' %}">Log in Again</a></h4>
+                </small>
+            </div>
+        </div>
+    </section>
+
+
+
+{% endblock %}
