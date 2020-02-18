@@ -125,7 +125,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-# Template used by Crispy for styling forms
+# Template used by Crispy for styling login forms
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # Where to direct the user after successful login
@@ -133,3 +133,7 @@ LOGIN_REDIRECT_URL = 'list-index'
 
 # DEFAULT LOGIN URL
 LOGIN_URL = 'login'
+
+# uploaded media directories
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

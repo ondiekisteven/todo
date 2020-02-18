@@ -3,23 +3,18 @@
 {% block title_name %}
     ToDo Registration
 {% endblock %}
-
 {% block content %}
     <section class="section-table" >
         <div class="container p-5">
             <form method="post">
                 {% csrf_token %}
                 <fieldset class="form-group">
-                    <legend class="border-bottom mb-4">
-                        Register here
-                    </legend>
+                    <legend class="border-bottom mb-4">Register here</legend>
                     {{ form|crispy }}
                     <div class="form-group">
                         <button class="btn btn-outline-info" type="submit" >Sign Up</button>
                     </div>
-
                 </fieldset>
-
             </form>
             <div class="border-top pt-3">
                 <small class="text-muted">
@@ -29,7 +24,4 @@
             </div>
         </div>
     </section>
-
-
-
 {% endblock %}
