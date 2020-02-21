@@ -16,15 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.contrib.auth.views import LoginView, LogoutView
-from users.views import register, profile
+from users.views import register, user_redirect, profile
 from django.conf.urls.static import static
 from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('list.urls')),
+    path('user/<str:username>/',  include('list.urls')),
+    path('', user_redirect, name="list-index"),
     path('register/', register, name='register'),
-    path('profile', profile, name='profile'),
+    path('profile/', profile, name='profile'),
     path('login/', LoginView.as_view(template_name='users/login.html'), name='login'),
     path('logout/', LogoutView.as_view(template_name='users/logout.html'), name='logout'),
 

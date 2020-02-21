@@ -1,0 +1,26 @@
+{% extends 'todo/base.html' %}
+
+{% block title_name %}
+    ToDo About Us
+{% endblock %}
+
+{% block content %}
+    <br>
+    <br>
+    <br>
+    <h2>Welcome to your TODO list manager</h2>
+    <br>
+
+    <p>If you are seeing this page, it means you haven't logged in</p>
+
+    <p>Here is a quick explanation how this site works:</p>
+
+    <ol>
+        <li>Users <a href="{% url 'register' %}">register</a> into the site</li>
+    <li>They create items they wish to do in future</li>
+    <li>They will get notifications when the time approaches</li>
+    <li>They can delete items if they are no longer interested in them</li>
+
+    <b><h4><a href="{% url 'login' %}">Log In </a>now if you have an account!</h4></b>
+    </ol>
+{% endblock %}

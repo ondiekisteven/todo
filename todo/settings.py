@@ -25,7 +25,7 @@ SECRET_KEY = '^($!cg396dpge)p4pc2%v6-3d^-qp7%q#x9yxw+2d53v91q!(7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['somwaki.cf', 'www.somwaki.cf', '35.232.125.182']
+ALLOWED_HOSTS = ['somwaki.cf', 'www.somwaki.cf', '35.232.125.182', 'localhost','127.0.0.1']
 
 
 # Application definition
