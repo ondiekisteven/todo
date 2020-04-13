@@ -1,0 +1,7 @@
+<h2>ALERTS HOME</h2>
+
+<ul>
+    {% for alert in alerts %}
+        <li>[{{alert.state}}] {{alert.dashboardId}} - {{alert.message}}</li>
+    {% endfor %}
+</ul>

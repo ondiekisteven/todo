@@ -19,6 +19,8 @@ from django.contrib.auth.views import LoginView, LogoutView
 from users.views import register, user_redirect, profile
 from django.conf.urls.static import static
 from django.conf import settings
+from rest_framework.urlpatterns import format_suffix_patterns
+from alerts.views import AlertList
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,6 +30,11 @@ urlpatterns = [
     path('profile/', profile, name='profile'),
     path('login/', LoginView.as_view(template_name='users/login.html'), name='login'),
     path('logout/', LogoutView.as_view(template_name='users/logout.html'), name='logout'),
+    path('alerts/', include('alerts.urls')),
+    path('api/v1/alerts/', AlertList.as_view()),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) +\
               static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+urlpatterns = format_suffix_patterns(urlpatterns)
+

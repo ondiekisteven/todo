@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['somwaki.cf', 'www.somwaki.cf', '35.232.125.182', 'localhost','
 
 INSTALLED_APPS = [
     'django.contrib.admin',
+    'alerts.apps.AlertsConfig',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -40,6 +41,7 @@ INSTALLED_APPS = [
     'list.apps.ListConfig',
     'users.apps.UsersConfig',
     'crispy_forms',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
